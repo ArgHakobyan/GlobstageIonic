@@ -1,0 +1,53 @@
+<!--
+  Generated template for the PersonalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Personal Info</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-personal">
+  <form action="http://globstage.com/api?action=editInterests" method="post">
+  <ion-list class="listIos">
+    <ion-item class="ionItem">
+      <ion-label color="#fff">Activities:</ion-label>
+      <ion-input name="activities" [(ngModel)]="this.activity" class="ionText" type="text"></ion-input>
+    </ion-item>
+    <ion-item class="ionItem">
+      <ion-label color="#fff">Interests:</ion-label>
+      <ion-input name="interests" [(ngModel)]="this.interests" class="ionText" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Favorite Munshids:</ion-label>
+      <ion-textarea name="favoritemunshids" [(ngModel)]="this.music"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Favorite Preachers:</ion-label>
+      <ion-textarea name="favoritepreachers" [(ngModel)]="this.kino"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Favorite Books:</ion-label>
+      <ion-textarea name="favoritebooks" [(ngModel)]="this.books"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Favorite Sports:</ion-label>
+      <ion-textarea name="favoritesports" [(ngModel)]="this.games"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Favorite Quotes:</ion-label>
+      <ion-textarea name="favoritequotes" [(ngModel)]="this.quote"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>About Me:</ion-label>
+      <ion-textarea name="aboutme" [(ngModel)]="this.myinfo"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <div class="save-btn">
+      <button type="submit" class="personal" (click)="saveInterests()" ion-button>Save</button>
+  </div>
+  </form>
+</ion-content>

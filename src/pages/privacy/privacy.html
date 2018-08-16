@@ -1,0 +1,76 @@
+<!--
+  Generated template for the PrivacyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Privacy</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="page-privacy">
+   <div class="privacy">
+      <h6>Who can write me private messages:</h6>
+      <div class="option">
+        <ion-select  name="types1" [(ngModel)]="types1">
+          <ion-option value="all">All Members</ion-option>
+          <ion-option value="fr">Just Friends</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="only">Only Verified</ion-option>
+        </ion-select>
+      </div>
+      <h6>Who sees other people's records on my wall:</h6>
+      <div class="option">
+        <ion-select  name="types2" [(ngModel)]="types2">
+          <ion-option value="all">All Members</ion-option>
+          <ion-option value="fr">Just Friends</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="only">Only Verified</ion-option>
+        </ion-select>
+      </div>
+      <h6>Who can post on my wall:</h6>
+      <div class="option">
+        <ion-select  name="types3" [(ngModel)]="types3">
+          <ion-option value="all">All Members</ion-option>
+          <ion-option value="fr">Just Friends</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="only">Only Verified</ion-option>
+        </ion-select>
+      </div>
+      <h6>Who can comment on my entries:</h6>
+      <div class="option">
+        <ion-select  name="types4" [(ngModel)]="types4">
+          <ion-option value="all">All Members</ion-option>
+          <ion-option value="fr">Just Friends</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="only">Only Verified</ion-option>
+        </ion-select>
+      </div>
+      <h6>Who sees my basic information page:</h6>
+      <div class="option">
+        <ion-select  name="types5" [(ngModel)]="types5">
+          <ion-option value="all">All Members</ion-option>
+          <ion-option value="fr">Just Friends</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="only">Only Verified</ion-option>
+        </ion-select>
+      </div>
+      <h6>Who can view a list of my guests:</h6>
+      <div class="option">
+        <ion-select  name="types6" [(ngModel)]="types6">
+          <ion-option value="all">All Members</ion-option>
+          <ion-option value="fr">Just Friends</ion-option>
+          <ion-option value="no">No</ion-option>
+          <ion-option value="only">Only Verified</ion-option>
+        </ion-select>
+      </div>
+      <div class="saved">
+          <button ion-button>Saved</button>
+      </div>
+   </div>
+</ion-content>

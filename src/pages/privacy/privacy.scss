@@ -1,0 +1,31 @@
+page-privacy {
+    .privacy{
+        padding-bottom: 20px;
+        h6 {
+            margin-bottom: 0;
+        }
+    }
+    .option {
+        border-bottom: 1px solid #95c800;
+    }
+    .option .select-ios{
+        padding-left: 0;
+        max-width: 40%;
+        .select-text{
+            color: #95c800;
+        }
+    }
+    .item-cover{
+        height: auto;
+    }
+    .privacy .saved{
+        text-align: center;
+        padding: 20px 0;
+        button{
+            height: 26px;
+            padding: 0 10px;
+            background-color: #95c800;
+        }
+    }
+    
+}

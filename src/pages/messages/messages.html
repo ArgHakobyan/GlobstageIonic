@@ -1,0 +1,32 @@
+<!--
+  Generated template for the MessagesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<script src="messages.ts"></script>
+<ion-header>
+  <ion-navbar>
+    <ion-title>Messages</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="page-messages">
+  <div class="messages">
+    <div class="usersBack" *ngFor="let person of messages" (click)="ionViewChat(person)">
+        <div class="msg-top">
+          <span>+1</span>
+        </div>
+        <div class="col20 user-photo">
+          <img *ngIf='person.user_photo' src='{{ "http://globstage.com//uploads/users/"+person.user_id+"/" + person.user_photo }}'>
+          <img *ngIf='! person.user_photo'  src='{{"assets/imgs/user-img.png"}}'>
+        </div>
+        <div class="col80 users">
+          <h6>{{ person.user_name +" " + person.user_lastname }}</h6>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+  </div>
+</ion-content>
+<ion-nav swipeBackEnabled="false"></ion-nav>

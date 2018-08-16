@@ -1,0 +1,131 @@
+page-pins {
+    img{
+        vertical-align: middle;
+    }
+    .col75{
+        width: 75%;
+        float: left;
+    }
+    .col25{
+        width: 25%;
+        float: left;
+    }
+    .clearfix{
+        clear: both;
+    }
+    .search-bar .searchbar{
+        background: #95c800;
+        padding: 2px;
+        border-radius: 4px;
+    }
+    .search-btn button{
+        background: #95c800;
+        height: 44px;
+        width: 100%;
+        margin-top: 0;
+    }
+    .notes {
+        padding: 8px 0;
+        button{
+            background: #95c800;
+            height: 30px;
+        }
+    }
+    .add-pins{
+        .add-sticker{
+            background: rgba(0, 0, 0, 0) linear-gradient(rgba(199, 194, 194, 0.9), rgba(241, 241, 241, 0.9));
+            border-bottom: 1px solid #000;
+            p{
+                font-weight: bold;
+                font-size: 15px;
+                padding: 10px 8px;
+            }
+        }
+        .select-file{
+            span{
+                color: grey;
+            }
+            button{
+                background: #95c800;
+                height: 30px;
+                .button-inner{
+                    color: #fff;
+                }
+            }
+        }
+        .category{
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            .select{
+                border: 1px solid #000;
+                border-radius: 4px;
+                padding: 4px;
+            }
+            .item-cover{
+                position: initial;
+            }
+            .select-text{
+                min-width: 100%;;
+            }
+            .select-icon .select-icon-inner{
+                left: -12px;
+            }
+            .select-cat{
+                padding-top: 6px;
+            }
+            textarea{
+                border: 1px solid #000;
+                margin-bottom: 10px;
+                padding: 6px 6px;
+                margin-left: 0;
+            }
+            .stick-btn{
+                margin-bottom: 10px;
+                background: #95c800;
+                height: 30px;
+            }
+        }
+    }
+    .pins{
+        text-align: center;
+        .my-pins{
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.18);
+            display: inline-block;
+            margin-bottom: 12px;
+            .pins-img{
+                img{
+                    padding: 4px;
+                }
+                .description{
+                    margin-top: 0;
+                    margin-bottom: 8px;
+                    text-align: left;
+                    margin-left: 6px;
+                }
+            }
+            .author-pins{
+                text-align: left;
+                padding: 6px 6px;
+                padding-bottom: 8px;
+                border-top: 1px solid rgb(231, 231, 231);
+                .name-padd{
+                    padding-left: 6px;
+                    padding-top: 4px;
+                }
+                img{
+                    width: 70px;
+                    border-radius: 6px;
+                }
+                h6{
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    line-height: 1;
+                }
+                p{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

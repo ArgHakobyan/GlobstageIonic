@@ -1,0 +1,48 @@
+page-contact {
+    .toolbar-title{
+        color: #fff;
+    }
+    .page-contact .ionItem{
+        padding-left: 8px;
+        ion-input{
+            color: #95c800;
+        }
+    }
+    .page-contact .text-input{
+        border: 1px solid #95c800;
+        border-radius: 5px;
+        padding: 6px;
+    }
+    .page-contact .listIos {
+        margin-bottom: 15px;
+    }
+    .page-contact .save-btn{
+        text-align: center;
+        .contact{
+            background: #95c800;
+            height: 26px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+    .page-contact .listIos .item-block .item-inner{
+        border: none;
+        box-shadow: none;
+    }
+    .page-contact .listIos.item-block .item-inner{
+        border: none;
+        box-shadow: none;
+    }
+    .page-contact .listIos > .item-block:last-child, .listIos > .item-wrapper:last-child .item-block{
+        border: none;
+        box-shadow: none;
+    }
+
+
+
+
+
+
+
+
+}

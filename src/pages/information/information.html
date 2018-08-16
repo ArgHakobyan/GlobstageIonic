@@ -1,0 +1,45 @@
+<!--
+  Generated template for the InformationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Information</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="page-information">
+  <ion-item class="ionItem">
+    <ion-label>Gender</ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-option value="f">Female</ion-option>
+        <ion-option value="m">Male</ion-option>
+      </ion-select>
+  </ion-item>
+  <ion-item class="ionItem">
+    <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/YYYY/DD" pickerFormat="MMMM YYYY DDDD" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    <ion-item class="ionItem">
+        <ion-label>Country</ion-label>
+          <ion-select>
+            <ion-option [selected]="true">Armenia</ion-option>
+            <ion-option>Russia</ion-option>
+          </ion-select>
+    </ion-item>
+    <ion-item class="ionItem">
+        <ion-label>City</ion-label>
+          <ion-select>
+            <ion-option>Spitak</ion-option>
+          </ion-select>
+    </ion-item>
+    <div class="save-btn">
+        <button class="information" ion-button>Save</button>
+    </div>
+</ion-content>

@@ -1,0 +1,29 @@
+page-information {
+    .toolbar-title-ios{
+        color: #fff;
+    }
+    .page-information .ionItem{
+        padding-left: 8px;
+        .select-text, .datetime-text{
+            color: #95c800;
+        }
+    }
+
+    .page-information .save-btn{
+        text-align: center;
+        padding-top: 10px;
+        .information{
+            background: #95c800;
+            height: 26px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+
+
+
+
+
+
+
+}

@@ -1,0 +1,349 @@
+page-profile {
+  img {
+    max-width: 100%;
+  }
+  .clearfix{
+    clear: both;
+  }
+  .col20{
+    width: 20%;
+    float: left;
+  }
+  .col30{
+    width: 30%;
+    float: left;
+  }
+  .col50{
+    width: 50%;
+    float: left;
+  }
+  .col70{
+    width: 70%;
+    float: left;
+  }
+  .col80{
+    width: 80%;
+    float: left;
+  }
+  .home-background {
+    background: url('../assets/imgs/fon.jpg') center no-repeat;
+    background-size: cover;
+  }
+  .toolbar-title{
+    color: #fff;
+  }
+  .home-background .user{
+    position: relative;
+    text-align: center;
+  }
+  .home-background .user .user-img{
+    position: relative;
+    width: 200px;
+    margin: auto;
+  }
+  .home-background .user .user-img img{
+    border-radius: 3px;
+  }
+  .home-background .user{
+    position: relative;
+  }
+  .home-background .user .user-name{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.71);
+    bottom: 3px;
+    left: 0;
+    padding: 8px 15px;
+    font-size: 18px;
+    font-family: roboto;
+    font-weight: 300;
+    color: #fff;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: block;
+    width: 200px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .home-background .user .edit{
+    position: relative;
+    color: #fff;
+    text-align: left;
+  }
+  .home-background .user .edit ul{
+    list-style: none;
+    padding: 0 6px;
+    margin-bottom: 3px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.71);
+    width: 100%;
+    -webkit-transition: all 2s;
+    transition: all 0.3s;
+  }
+  .home-background .user .edit ul li{
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .home-background .user .edit ul li span{
+    padding-left: 6px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .home-background .media-tab {
+    width: 100%;
+  }
+  .home-background .media-tab .tabs{
+    background: rgba(3, 170, 173, 0.8);
+    margin-bottom: 0;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+  }
+  .home-background .media-tab .tabs li  {
+    display: inline-block;
+    padding: 10px 16px;
+  }
+  .home-background .media-tab .tabs li ion-icon{
+    font-size: 28px;
+    color: #fff;
+  }
+  .home-background .media-tab .tabs .active{
+    border-bottom: 5px solid rgb(149, 200, 0);
+  }
+  .home-background .media-tab .content-tabs{
+    background: #fff;
+    border-bottom: 2px solid #95c800;
+  }
+  .home-background .media-tab .content-tabs .home-tab .t-info{
+    padding-bottom: 6px;
+  }
+  .home-background .media-tab .content-tabs .home-tab .user-country, .user-city , .user-birthday{
+    display: inline-block;
+    padding: 0 20px;
+    margin-left: 20px;
+    color: #95c800;
+  }
+  .home-background .media-tab .content-tabs .home-tab .user-info{
+    display: inline-block;
+    padding: 0 20px;
+    margin-left: 40px;
+    background: #95c800;
+  }
+  .home-background .media-tab .content-tabs .home-tab .gift .g-info{
+    border-bottom: 1px dashed #666666;
+    color: #666666;
+    font-size: 15px;
+    width: 100%;
+    padding-bottom: 6px;
+  }
+  .home-background .media-tab .content-tabs .home-tab .gift .user-n {
+    color: #777777;
+  }
+  .home-background .media-tab .content-tabs .home-tab .information p{
+    font-size: 15px;
+    margin: 5px 0;
+  }
+  .home-background .media-tab .content-tabs .home-tab .user-info span{
+    color: #fff;
+  }
+  .home-background .media-tab .content-tabs .home-tab .content-details{
+    padding-bottom: 10px;
+  }
+  .home-background .media-tab .content-tabs .home-tab .personal{
+    padding: 10px 0;
+    span{
+      display: block;
+    }
+    span::first-letter {
+      text-transform: uppercase;
+   }
+  }
+  .home-background .media-tab .content-tabs .home-tab .show-details {
+    text-align: center;
+    background: #f1f5f8;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    color: #536069;
+    font-size: 15px;
+  }
+  .home-background .media-tab .content-tabs .home-tab .border .edits {
+    border-bottom: 1px dashed #666666;
+    padding-bottom: 6px;
+    width: 260px;
+    max-width: 100%;
+  }
+  #map {
+    width: 100%;
+    height: calc(100vh - 420px);
+  }
+  .home-background .media-tab .content-tabs .tabs-a{
+    padding: 0 8px;
+  }
+  .home-background .media-tab .content-tabs .tabs-a img{
+    height: 100px;
+    margin-top: 6px;
+}
+  .home-background .media-tab .content-tabs .tabs-a .upload{
+    text-align: center;
+    padding-top: 20px;
+  }
+  .home-background .media-tab .content-tabs .tabs-a .upload p{
+    margin-bottom: 6px;
+  }
+  .home-background .media-tab .content-tabs .tabs-a .upload span{
+    text-decoration: none;
+    color: #95c800;
+  }
+  .home-background .media-tab .content-tabs .img-album .create-album{
+    p{
+    text-align: center;
+    color: #666666;
+    font-size: 13px;
+    font-weight: bold;
+    }
+    ion-label{
+    color: #4274A4;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    }
+    input{
+    border: 1px solid #C6D4DC;
+    margin-bottom: 10px;
+    padding: 6px;
+    margin-left: 0;
+    }
+    textarea{
+    border: 1px solid #C6D4DC;
+    margin-bottom: 10px;
+    padding: 6px;
+    margin-left: 0;
+    }
+  }
+  .home-background .media-tab .content-tabs .img-album .create-btn{
+    padding-bottom: 10px;
+    button{
+    font-size: 14px;
+    padding: 4px 15px;
+    height: 26px;
+    padding: 0 8px;
+    }
+    .done{
+      background-color: #95c800;
+    }
+    .undefined{
+      background-color: #ababab;
+    }
+  }
+  .home-background .media-tab .content-tabs .add-video{
+    p{
+    text-align: center;
+    color: #666666;
+    font-size: 13px;
+    font-weight: bold;
+    }
+    ion-label{
+    color: #4274A4;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    }
+    input{
+    border: 1px solid #C6D4DC;
+    margin-bottom: 10px;
+    padding: 6px;
+    margin-left: 0;
+    }
+    .support{
+    color: #666666;
+    font-size: 13px;
+    padding: 4px 0;
+    display: inline-block;
+    }
+  }
+  .home-background .media-tab .content-tabs .add-video .add-btn{
+    padding-bottom: 10px;
+    button{
+    font-size: 14px;
+    padding: 4px 15px;
+    height: 26px;
+    padding: 0 8px;
+    color: #fff;
+    }
+    .done{
+      background-color: #95c800;
+    }
+    .undefined{
+      background-color: #ababab;
+    }
+  }
+  .home-background .media-tab .wall-title {
+    background: #fff;
+    padding: 0 8px;
+    margin-bottom: 40px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    p {
+      margin-top: 0;
+    }
+  }
+  .home-background .media-tab .wall-title img{
+    width: 45px;
+    height: 45px;
+  }
+  .home-background .media-tab .wall-title textarea{
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    background: #f1f1f1;
+    border: 1px solid #E5E5E5;
+    padding: 4px;
+    font-size: 13px;
+  }
+  .home-background .media-tab .wall-title .share-go{
+    padding-bottom: 6px;
+  }
+  .home-background .media-tab .wall-title .media {
+    text-align: center;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 5px;
+    }
+    li{
+      display: inline-block;
+      padding: 0 10px;
+      padding-top: 6px;
+    }
+    ion-icon{
+      font-size: 26px;
+      color: #95c900;
+    }
+  }
+  .home-background .media-tab .wall-title .share-btn{
+    border-radius: 4px;
+    height: 26px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #95c800;
+    margin: 8px 0;
+    padding: 0 6px;
+  }
+  .home-background .footer-icons ul li ion-icon {
+    font-size: 30px;
+    color: #fff;
+  }
+  ion-app [padding] .scroll-content {
+    width: 100%;
+  }
+  .toolbar ion-icon {
+    font-size: 30px;
+    color: #fff;
+    width: 34px;
+  }
+
+
+
+
+
+}

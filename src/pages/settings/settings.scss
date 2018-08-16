@@ -1,0 +1,112 @@
+page-settings {
+    .toolbar{
+        color: #fff;
+    }
+    .page-settings .change{
+        text-align: center;
+        h4{
+        font-size: 16px;
+        border-bottom: 2px solid #95c800;
+        padding-bottom: 8px;
+        }
+    }
+    .page-settings .ionItem{
+        padding-left: 8px;
+        ion-input{
+            color: #95c800;
+        }
+    }
+    .page-settings .text-input{
+        border: 1px solid #95c800;
+        border-radius: 5px;
+        padding: 6px;
+    }
+    .page-settings .listIos {
+        margin-bottom: 4px;
+    }
+    .page-settings .changed{
+        padding-bottom: 10px;
+    }
+    .page-settings .padding-bottom{
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+    .page-settings .changed button{
+        background: #95c800;
+        height: 26px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .page-settings .listIos .item-block .item-inner{
+        border: none;
+        box-shadow: none;
+    }
+    .page-settings .ilistIos.item-block .item-inner{
+        border: none;
+        box-shadow: none;
+    }
+    .page-settings .listIos > .item-block:last-child, .listIos > .item-wrapper:last-child .item-block{
+        border: none;
+        box-shadow: none;
+    }
+    .page-settings .listIos > .item-block:first-child{
+        border: none;
+        box-shadow: none;
+    }
+    .page-settings .view-ferification .select-file{
+        text-align: left;
+        padding: 0 7px;
+        button{
+            height: 26px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+    }
+    .page-settings .view-ferification .upload-img{
+        padding: 0 8px;
+        img{
+            text-align: center;
+            max-width: 210px;
+            margin-top: 20px;
+           }
+        p{
+         text-align: left;
+         font-size: 12px;
+         }
+         .ionCheckbox{
+            padding: 0;
+            font-size: 12px;
+         }
+         ion-checkbox{
+             margin-right: 6px;
+         }
+         .checkbox .checkbox-icon{
+             border-radius: 0;
+             width: 19px;
+             height: 19px;
+         }
+         .checkbox .checkbox-checked .checkbox-inner{
+            left: 5px;
+            top: 0px;
+            width: 6px;
+            height: 11px;
+         }
+         .checkbox .checkbox-checked{
+            border-color: #95c800;
+            background-color: #95c800;
+         }
+    }
+    .item-md.item-input.item-input-has-focus .item-inner,
+    .item-md.item-input.input-has-focus .item-inner {
+        box-shadow: none;
+    }    
+        
+    
+    
+    
+    
+
+
+
+
+}

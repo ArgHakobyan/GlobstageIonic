@@ -1,19 +1,110 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-menu [content]="content1">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-
+    <ion-content>
+      <!-- <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+      </ion-list> -->
+      <ion-content class="menu-page" *ngIf="menuProfile">
+            <div class="profile">
+              <div class="menu-user">
+                <img *ngIf='menuProfile.user_photo' src='{{ "http://globstage.com//uploads/users/"+menuProfile.user_id+"/" + menuProfile.user_photo }}' />       
+                <img *ngIf='! menuProfile.user_photo' src="../../assets/imgs/user-img.png" />
+                <span></span>
+              </div>
+              <h3>{{ menuProfile.user_name +" " + menuProfile.user_lastname }}</h3>
+              <div class="logout">
+                <span (click)="logout()">Exit</span>
+              </div>
+            </div>
+            <div class="side-menu">
+              <ul>
+                <!-- <li><a><ion-icon name="ios-image"></ion-icon>Albums</a></li> -->
+                <!-- <li><a><ion-icon name="md-videocam"></ion-icon>Video</a></li> -->
+                <li><a (click)="ionViewGroups()"><ion-icon name="ios-chatbubbles"></ion-icon>Group</a></li>
+                <li><a (click)="ionViewNews()"><ion-icon name="ios-paper"></ion-icon>News</a></li>
+                <li><a (click)="ionViewPins()"><ion-icon name="ios-link"></ion-icon>Notes</a></li>
+                <li><a (click)="ionViewPrivacy()"><ion-icon name="ios-lock"></ion-icon>Privacy</a></li>
+                <li><a (click)="ionViewInformation()"><ion-icon name="md-information-circle"></ion-icon>Information</a></li>
+                <li><a (click)="ionViewContact()"><ion-icon name="ios-contact"></ion-icon>Contact</a></li>
+                <li><a (click)="ionViewPersonal()"><ion-icon name="md-create"></ion-icon>Personal Info</a></li>
+                <li><a (click)="ionViewLanguage()"><ion-icon name="md-globe"></ion-icon>Language</a></li>
+                <li><a (click)="ionViewSettings()"><ion-icon name="md-settings"></ion-icon>Settings</a></li>
+              </ul>
+            </div>
+            <ng-template [ngIf]= "languageTab">
+              <div class="language">
+                <h6>Language</h6>
+                <div class="languageSelect">
+                  <ion-select  name="type1" [(ngModel)]="type1">
+                      <ion-option value="en">English</ion-option>
+                      <ion-option value="ru">Русский</ion-option>
+                  </ion-select>
+                </div>
+              </div>
+            </ng-template>
+          </ion-content>
+    </ion-content>
 </ion-menu>
 
+<ion-footer class="fixed">
+    
+    <ng-template [ngIf]= "searchTab">
+      <form action="http://globstage.com/api?action=search" method="post">
+      <div class="search-category">
+        <div class="col50 searc-input">
+            <ion-input name="query" [(ngModel)]="query" placeholder="Search"></ion-input>
+        </div>
+        <div class="col30 select">
+              <ion-select name="type" [(ngModel)]="type">
+                <ion-option value="1">By the people</ion-option>
+                <ion-option value="2">On the videos</ion-option>
+                <ion-option value="3">On the notes</ion-option>
+                <ion-option value="4">On the communities</ion-option>
+                <ion-option value="5">On the recordings</ion-option>
+              </ion-select>
+        </div>
+        <div class="col20 btn-submit">
+          <button (click)="search()" type="submit" ion-button icon-only>Find</button>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+     </form>
+  </ng-template>
+  <ion-toolbar>
+    <ion-buttons>
+        <button (click)="ionProfilePage()" ion-button icon-only>
+            <ion-icon  name="ios-home"></ion-icon>
+        </button>
+        <button (click)="ionViewMessages()" ion-button icon-only>
+            <ion-icon  name="md-mail"></ion-icon>
+        </button>
+        <button (click)="ionViewFriends()" ion-button icon-only>
+            <ion-icon name="md-people"></ion-icon>
+        </button>
+        <button (click)="ionViewSearch()" ion-button icon-only>
+            <ion-icon name="ios-search"></ion-icon>
+        </button>
+        <button (click)="ionViewNews()" ion-button icon-only>
+            <ion-icon name="ios-paper"></ion-icon>
+        </button>
+        <button (click)="ionViewGroups()" ion-button icon-only>
+            <ion-icon name="ios-add-circle"></ion-icon>
+        </button>
+        <button (click)="ionViewNotes()" ion-button icon-only>
+            <ion-icon name="md-flag"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav [root]="rootPage" #content1 swipeBackEnabled="false"></ion-nav>
+ 
+

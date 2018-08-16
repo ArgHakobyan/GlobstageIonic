@@ -1,0 +1,47 @@
+page-friends {
+.toolbar-title-ios{
+    color: #fff;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+.col60{
+    width: 60%;
+    float: left;
+}
+.col40{
+    width: 40%;
+    float: left;
+}
+.clearfix{
+    clear: both;
+}
+.friends {
+    height: calc(100vh - 110px);
+    overflow-y: scroll;
+}
+.friends .userFriends {
+    padding-bottom: 10px;
+}
+.friends .user-img img{
+    width: 100px;
+    border-radius: 6px;
+}
+.friends .user-info .done {
+    width: 90%;
+    height: 30px;
+    background: #5cb85c;
+}
+.friends .user-info h6 {
+    font-size: 16px;
+    color: #97C900;
+    font-weight: bold
+}
+
+
+
+
+
+
+}

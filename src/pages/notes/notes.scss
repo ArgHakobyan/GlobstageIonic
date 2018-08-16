@@ -1,0 +1,61 @@
+page-notes {
+  .notes button{
+    background: #95c800;
+    height: 30px;
+}
+.add-notes{
+    ion-label{
+        color: #4274A4;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .title-name{
+        border: 1px solid #C6D4DC;
+        margin-top: 8px;
+        margin-left: 0;
+        padding:  6px 4px;
+    }
+    .text-input{
+        margin: 0;
+    }
+    .text-desc {
+        border: 1px solid #C6D4DC;
+        padding:  6px 4px;
+    }
+    .post{
+        background: #95c800;
+        height: 26px;
+    }
+    .publish-btn .ionCheckbox{
+        padding-left: 0;
+        .item-inner {
+            border: none;
+        }
+        ion-checkbox {
+            padding-left: 0;
+            margin-right: 6px;
+            .checkbox-checked{
+                background: #95c800;
+                border-color: #95c800;
+                .checkbox-inner{
+                    left: 5px;
+                    top: 0px;
+                    width: 6px;
+                    height: 11px;
+                }
+            }
+            .checkbox-icon{
+                border-radius: 0;
+                width: 19px;
+                height: 19px;
+            }
+            
+        }
+    }
+} 
+
+
+
+
+
+}

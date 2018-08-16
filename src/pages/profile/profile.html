@@ -1,0 +1,188 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <ion-navbar>
+      <ion-title>My Profile</ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding class="home-background">
+    <!-- <button ion-button full (click)="chooseFile()">File Chooser</button> -->
+    <div class="user">
+      <div class="user-img">
+        <img *ngIf='profile.user_photo' (click)="showSelector()" src='{{ "http://globstage.com//uploads/users/"+profile.user_id+"/" + profile.user_photo }}' />       
+         <img *ngIf='! profile.user_photo' (click)="showSelector()" src="assets/imgs/user-img.png" />
+        <span *ngIf="selectorHidden; else select" class="user-name">{{ profile.user_name +" " + profile.user_lastname }}</span>
+      </div>
+      <ng-template #select>
+        <div class="edit">
+        <ul>
+          <li><ion-icon name="md-download"><span>Upload a new photo</span></ion-icon></li>
+          <li><ion-icon name="md-refresh"><span>Change thumbnail</span></ion-icon></li>
+          <li><ion-icon name="md-close"><span>Delete</span></ion-icon></li>
+        </ul>
+        </div>
+      </ng-template>
+    </div>
+    <div class="media-tab">
+      <ul class="tabs">
+        <li [ngClass]="{'active': id === 1 }" id="1" (click)="onToggle1(id=1)"><ion-icon name="md-globe"></ion-icon></li>
+        <li [ngClass]="{'active': id === 2 }" id="2" (click)="onToggle2(id=2)"><ion-icon name="ios-home"></ion-icon></li>
+        <li [ngClass]="{'active': id === 3 }" id="3" (click)="onToggle3(id=3)"><ion-icon name="ios-image"></ion-icon></li>
+        <li [ngClass]="{'active': id === 4 }" id="4" (click)="onToggle4(id=4)"><ion-icon name="ios-musical-notes"></ion-icon></li>
+        <li [ngClass]="{'active': id === 5 }" id="5" (click)="onToggle5(id=5)"><ion-icon name="ios-film-outline"></ion-icon></li>
+      </ul>
+      <div class="content-tabs">
+        <div [hidden]= "!toggleFlag1">
+          <div #map id="map"></div>
+        </div>
+        <ng-template [ngIf]= "toggleFlag2" >
+        <div class="home-tab tabs-a">
+          <div class="col50 t-info">
+            <div class="information">
+              <p>Country</p>
+              <div class="user-country">
+                <span>{{ profile.user_country_city_name.split('|')[0] }}</span>
+              </div>
+              <p>City</p>
+              <div class="user-city">
+                <span>{{ profile.user_country_city_name.split('|')[1] }}</span>
+              </div>
+              <p>Date of birth:</p>
+              <div class="user-birthday">
+                <span class="rating">{{ profile.user_birthday }}</span>
+              </div>
+              <p>Rating</p>
+              <div class="user-info">
+                <span class="rating">{{ profile.user_rating }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="col50 gift">
+            <p class="g-info">gifts</p>
+            <div class="gift-info">
+              <p>http://music.com/uploads/files/audio/2012/</p>
+              <p class="user-n">Argam There are no gifts You can be the first to give a gift</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div (click)="show1Toggle()" class="show-details">
+            <span *ngIf= "!detailsToggle">Show Details</span>
+            <span *ngIf= "detailsToggle">Close Details</span>
+          </div>
+          <ng-template [ngIf]= "detailsToggle">
+          <div class="hidden-block">
+            <div class="content-details border">
+              <p class="contact edits">Contact<span></span></p>
+            </div>
+            <div class="personal border">
+              <p class="personal-info edits">Personal Info<span></span></p>
+              <span>{{ profile.user_xfields_all.split('||')[0].replace('|', ': ') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[1].replace('|', ': ') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[6].replace('|', ': ').replace('games', 'Favorite Munshids') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[3].replace('|', ': ').replace('music', 'Favorite Preachers:') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[5].replace('|', ': ').replace('books', 'Favorite Books') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[4].replace('|', ': ').replace('kino', 'Favorite Sports:') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[7].replace('|', ': ').replace('quote', 'Favorite Quotes') }}</span>
+              <span>{{ profile.user_xfields_all.split('||')[2].replace('|', ': ').replace('myinfo', 'About Me') }}</span>
+            </div>
+          </div>
+          </ng-template>
+        </div>
+        </ng-template>
+        <ng-template [ngIf]= "toggleFlag3">
+        <div class="img-album tabs-a">
+          <div class="col30 img-alb">
+            <img src="assets/imgs/img-albums.png">
+          </div>
+          <div class="col70 upload">
+            <p>You can upload photos to albums</p>
+            <span (click)="createAlbum()">Create an album</span>
+          </div>
+          <div class="clearfix"></div>
+          <ng-template [ngIf]= "albumTab">
+          <div class="create-album">
+            <p>Create a new album</p>
+            <ion-label stacked>Name</ion-label>
+            <ion-input type="text"></ion-input>
+            <ion-label>Description</ion-label>
+            <ion-textarea></ion-textarea>
+            <div class="create-btn">
+              <button class="done" ion-button>Done</button>
+              <button class="undefined" (click)="cancelAlbum()" ion-button>Cancel</button>
+            </div>
+          </div>
+          </ng-template>
+        </div>
+        </ng-template>
+        <ng-template [ngIf]= "toggleFlag4">
+        <div class="audio tabs-a">
+          <div class="col30 img-alb">
+            <img src="assets/imgs/img-audio.png">
+          </div>
+          <div class="co70 upload">
+            <p>You can download audio</p>
+            <span (click)="createAlbum()">Add Audio</span>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        </ng-template>
+        <ng-template [ngIf]= "toggleFlag5">
+        <div class="video tabs-a">
+          <div class="col30 img-alb">
+            <img src="assets/imgs/img-videos.png">
+          </div>
+          <div class="co70 upload">
+            <p>You have no videos</p>
+            <span (click)="createVideo()">Add a video</span>
+          </div>
+          <div class="clearfix"></div>
+          <ng-template [ngIf]= "addVideo">
+          <div class="add-video">
+            <p>Adding a new video</p>
+            <ion-label stacked>Link to this video</ion-label>
+            <ion-input type="text"></ion-input>
+            <span class="support">Supported video services <b>YouTube, RuTube.Ru, Vimeo.Com, Smotri.Com</b></span>
+            <div class="add-btn">
+              <button class="done" ion-button>Done</button>
+              <button class="undefined" (click)="cancelVideo()" ion-button>Cancel</button>
+            </div>
+          </div>
+          </ng-template>
+        </div>
+        </ng-template>
+      </div>
+      <div class="wall-title">
+        <p>Wall</p>
+        <div class="col20 user-go">
+          <img *ngIf='profile.user_photo'  src='{{ "http://globstage.com//uploads/users/"+profile.user_id+"/" + profile.user_photo }}' />       
+          <img *ngIf='! profile.user_photo' src="assets/imgs/user-img.png" />
+        </div>
+        <div class="col80 share-go">
+          <textarea name="name" rows="3" cols="80"></textarea>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="media">
+          <ul>
+            <li><ion-icon name="md-happy"></ion-icon></li>
+            <li><ion-icon name="ios-image"></ion-icon></li>
+            <li><ion-icon name="md-videocam"></ion-icon></li>
+            <li><ion-icon name="ios-musical-notes"></ion-icon></li>
+            <li><ion-icon name="md-list"></ion-icon></li>
+            <li><ion-icon name="md-document"></ion-icon></li>
+          </ul>
+          <button class="share-btn" ion-button>Share</button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </ion-content>
+  

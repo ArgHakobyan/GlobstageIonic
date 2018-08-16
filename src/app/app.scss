@@ -14,3 +14,214 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.col50{
+  width: 50%;
+  float: left;
+}
+.col30{
+  width: 30%;
+  float: left;
+}
+.col20{
+  width: 20%;
+  float: left;
+}
+.clearfix{
+  clear: both;
+}
+.toolbar-title{
+  color: #fff;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.ios .menu-inner{
+  background: #252b34;
+  overflow: scroll;
+}
+.profile{
+  text-align: center;
+  padding: 20px 0;
+  background: #161C25;
+}
+.profile .menu-user{
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 10px auto 0px;
+}
+.profile .menu-user img{
+  width: 110px;
+  height: 110px;
+  border-radius: 100px;
+  display: block;
+  border: 2px solid #03AAAC;
+  padding: 6px;
+  margin: auto;
+}
+.profile .menu-user span{
+  display: block;
+  position: absolute;
+  right: 0px;
+  padding: 8px 12px;
+  background: #03AAAC;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  color: #FFFFFF;
+  font-weight: 500;
+  top: 80px;
+  z-index: 5;
+}
+.profile h3 {
+  font-size: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.profile .logout span{
+  text-decoration: none;
+  width: 100px;
+  display: block;
+  border: 2px solid #FFFFFF;
+  text-align: center;
+  padding: 8px;
+  border-radius: 3px;
+  margin: 20px auto;
+  color: #FFFFFF;
+}
+.side-menu {
+  position: relative;
+  background: #252b34;
+  padding: 0;
+  ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    padding-bottom: 40px;
+    margin-bottom: 0;
+  }
+  li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    border-top: 1px solid #161C25;
+    border-bottom: 1px solid #161C25;
+    margin-bottom: -1px;
+  }
+  ion-icon{
+    color: #03aaac;
+    padding: 10px;
+    display: inline-block;
+    background: #161C25;
+    margin-right: 16px;
+    font-size: 20px;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+    .footer-icons {
+      text-align: center;
+    }
+    .fixed {
+      position: fixed;
+    }
+    .toolbar-background{
+      background: #01878a;
+    }
+    .fixed button {
+      padding: 0 6px;
+    }
+    .footer-icons ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 6px;
+      margin-top: 6px;
+    }
+    .footer-icons ul li{
+      display: inline-block;
+      padding: 0 30px;
+    }
+    .toolbar .title {
+      left: 0;
+      top: 0;
+      padding: 0 90px 1px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .toolbar{
+      text-align: center;
+      min-height: 45px;
+      ion-icon{
+        color: #fff;
+      }
+      .bar-button[icon-only] ion-icon{
+        padding: 0 10px;
+        font-size: 26px;
+      }
+    }
+    .search-category {
+      background: #01878a;
+      border-bottom: 1px solid #6ea7a9;
+    }
+    .searchbar{
+      background: #01878a;
+    }
+    .search-category .select {
+      padding-top: 8px;
+    }
+    .search-category .select ion-select {
+      max-width: 100%;
+    }
+    .search-category .select .item-cover{
+      position: initial;
+    }
+    .search-category .select-text {
+      min-width: 80%;
+      color: #fff;
+    }
+    .search-category .select .select-icon .select-icon-inner {
+      left: 0;
+      color: #fff;
+    }
+    .searc-input .text-input {
+      background: #fff;
+      height: 35px;
+      margin-left: 10px;
+      padding: 0 8px;
+      border-radius: 4px;
+    }
+    .btn-submit{ 
+      padding-top: 6px;
+      .button-default {
+      background: #95c800;
+      height: 35px;
+      width: 80%;
+    }
+  }
+  .menu-page .select-text{
+    color: #fff;
+    font-weight: bold;
+  }
+  .language {
+    background: #01878a;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 44px;
+    h6 {
+      color: #fff;
+      font-weight: bold;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+   }
+   .languageSelect{
+     text-align: -webkit-center;
+     .select .select-icon .select-icon-inner {
+      left: -10px;
+      color: #fff;
+   }
+   }
+   
+

@@ -1,0 +1,78 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="page-chat">
+  <div class="chat">
+    <div class="height-scroll">
+      <div class="chatBack" *ngFor="let msg of chat">
+        <div class="message" *ngIf="current_user_id != msg.from_user_id">
+            <div class="col20 user-photo">
+                <img *ngIf='profile.user_photo' src='{{ "http://globstage.com//uploads/users/"+profile.user_id+"/" + profile.user_photo }}'>
+                <img *ngIf='! profile.user_photo'  src='{{"assets/imgs/user-img.png"}}'>
+            </div>
+            <div class="col80">
+              <div class="users col60">
+                <h6>{{ profile.user_name }}</h6>
+                <p>{{msg.text}}</p>
+              </div>
+              <div class="date col40">
+                <span>{{msg.date.split(' ')[1].replace('.000000','')}}</span>
+                <img src="assets/imgs/close_a_wall.png">
+              </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="message" *ngIf="current_user_id == msg.from_user_id">
+            <div class="col20 user-photo">
+                <img *ngIf='user_photo' src='{{ "http://globstage.com//uploads/users/"+current_user_id+"/" + user_photo }}'>
+                <img *ngIf='!user_photo'  src='{{"assets/imgs/user-img.png"}}'>
+            </div>
+            <div class="col80">
+              <div class="users col60">
+                <h6>{{ user_name }}</h6>
+                <p>{{msg.text}}</p>
+              </div>
+              <div class="date col40">
+                <span>{{msg.date.split(' ')[1].replace('.000000','')}}</span>
+                <img src="assets/imgs/close_a_wall.png">
+              </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="message-block">
+        <form action="http://globstage.com/api?action=write_message" method="post">
+        <div class="col20 user-img">
+          <img *ngIf='user_photo'  src='{{ "http://globstage.com//uploads/users/"+current_user_id+"/" + user_photo }}' />       
+          <img *ngIf='!user_photo' src="assets/imgs/user-img.png" />
+        </div>
+        <div class="col80 msg-text">
+          <textarea name="name" id="message-area"  [(ngModel)]="this.msg" rows="5" cols="80" placeholder="Enter your message"></textarea>
+          <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="media">
+          <ul>
+            <li><ion-icon name="md-happy"></ion-icon></li>
+            <li><ion-icon name="ios-image"></ion-icon></li>
+            <li><ion-icon name="md-videocam"></ion-icon></li>
+            <li><ion-icon name="ios-musical-notes"></ion-icon></li>
+            <li><ion-icon name="md-document"></ion-icon></li>
+          </ul>
+          <button class="send-btn" (click)="sendMessage()" ion-button>Send</button>
+        </div>
+        </form>
+    </div>
+  </div>
+</ion-content>

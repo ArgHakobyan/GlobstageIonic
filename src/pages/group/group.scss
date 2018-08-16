@@ -1,0 +1,49 @@
+page-group {
+    #map {
+        width: 100%;
+        height: calc(100vh - 170px);
+      }
+      .markers-icon{
+          text-align: center;
+          background: #01878a;
+          .icon{
+              font-size: 28px;
+              padding: 6px 11px;
+              color: #fff;
+          }
+      }
+      .padding-icons .icon{
+        padding: 6px 15px;
+      }
+      .create-group .name-group{
+          border: 1px solid #C6D4DC;
+          height: 35px;
+          margin-bottom: 6px;
+          .text-input{
+              margin: 0;
+              padding: 6px;
+          }
+      }
+      .create-group{
+          padding: 0 10px;
+        .label {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        .create-btn {
+            padding: 8px 0;
+            button{
+                background: #95c800;
+                height: 26px;
+                padding: 0 10px;
+                font-size: 14px;
+            }
+                }  
+        }
+        .markers {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+             
+      
+}

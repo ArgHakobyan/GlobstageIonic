@@ -1,0 +1,79 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content>
+  <ion-content class="home-background">
+    <div class="logo">
+      <img src="assets/imgs/Glob-logo.png">
+    </div>
+    <div class="register-block" [hidden]='isLogin'>
+      <h2>Register</h2>
+      <span></span>
+      <form [formGroup]="formgroup" action="http://globstage.com/api?action=register" method="post">
+        <ion-item class="formCenter">
+          <div class="required" *ngIf="name.hasError('required') && name.touched">
+            <p>* Name is required</p>
+          </div>
+        <input type="text" formControlName="name" name="name" placeholder="Your name"><br>
+        </ion-item>
+        <ion-item class="formCenter">
+          <div class="required" *ngIf="lastname.hasError('required') && name.touched">
+            <p>* Lastname is required</p>
+          </div>
+        <input type="text" formControlName="lastname" name="lastname" placeholder="Your last name"><br>
+        </ion-item>
+        <ion-item class="formCenter">
+          <div class="required" *ngIf="email.hasError('required') && name.touched">
+            <p>* Email is required</p>
+          </div>
+        <input type="email" formControlName="email" name="email" placeholder="E-mail address"><br>
+        </ion-item>
+        <ion-item class="formCenter">
+          <div class="required" *ngIf="password_first.hasError('required') && name.touched">
+            <p>* Password is required</p>
+          </div>
+        <input type="password" formControlName="password_first" name="password_first" placeholder="Password"><br>
+        </ion-item>
+        <ion-item class="formCenter">
+          <div class="required" *ngIf="password_second.hasError('required') && name.touched">
+            <p>* Password again is required</p>
+          </div>
+        <input type="password" formControlName="password_second" name="password_second" placeholder="Password again"><br>
+        </ion-item>
+        <div>
+          <button class="reg-btn" type="submit" [disabled]="!formgroup.valid" (click)="registerAction()">Register</button>
+        </div>
+      </form>
+      <div class="login-btn">
+        <button type="submit" (click)="openLogin()">Login</button>
+      </div>
+    </div>
+    <div class="login-block" [hidden]='isRegister'>
+      <h2>Welcome</h2>
+      <span class="border-green"></span>
+      <form [formGroup]="formgroupLog" action="http://api-globstage.atero.solutions/v1//users/token" method="post">
+        <span class="input-span">E-MAIL:</span>
+        <input type="email" name="email" formControlName="email"><br>
+        <span class="input-span">PASSWORD</span>
+        <input type="password" name="password" formControlName="password"><br>
+        <a href="#"><p>Forgot your password?</p></a>
+        <button ion-button class="log-btn" type="submit" [disabled]="!formgroupLog.valid" (click)="loginAction()">Login</button>
+      </form>
+      <div class="register-btn">
+        <button type="submit" (click)="openRegister()">Register</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-content>

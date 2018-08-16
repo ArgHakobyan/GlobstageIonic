@@ -1,0 +1,58 @@
+page-messages {
+.toolbar-title-ios{
+  color: #fff;
+}
+img {
+    max-width: 100%;
+  }
+.clearfix{clear: both;}
+.col20{
+  width: 20%;
+  float: left;
+}
+.col80{
+  width: 80%;
+  float: left;
+}
+.messages {
+  height: calc(100vh - 110px);
+  overflow-y: scroll;
+}
+.messages .usersBack {
+    margin-bottom: 10px;
+    background: #03aaac;
+    border-radius: 6px;
+}
+.messages .usersBack .user-photo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    margin: 10px;
+}
+.messages .usersBack .users h6{
+    margin-top: 20px;
+    color: #fff;
+}
+.messages .usersBack .msg-top{
+  text-align: center;
+  position: relative;
+}
+.messages .usersBack .msg-top span{
+  background: #95c800;
+  color: #fff;
+  border-radius: 100%;
+  padding-top: 3px;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  height: 25px;
+  width: 25px;
+  font-size: 15px;
+}
+
+
+
+
+
+
+}

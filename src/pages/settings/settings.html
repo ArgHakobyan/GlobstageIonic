@@ -1,0 +1,165 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="page-settings">
+  <div class="change-password change">
+    <h4>Change password</h4>
+      <ion-list class="listIos">
+        <ion-item class="ionItem">
+          <ion-label color="#fff">Old password:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item class="ionItem">
+          <ion-label color="#fff">New Password:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item class="ionItem">
+          <ion-label color="#fff">Confirm Password:</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </ion-list>
+        <div class="changed">
+            <button ion-button>Change password</button>
+        </div>
+  </div>
+    <div class="change-name change">
+      <h4>Change name</h4>
+        <ion-list class="listIos">
+          <ion-item class="ionItem">
+            <ion-label color="#fff">Your name:</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item class="ionItem">
+            <ion-label color="#fff">Your last name:</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+          <div class="changed">
+              <button ion-button>Change name</button>
+          </div>
+      </div>
+    <div class="page-address change">
+      <h4>Page address</h4>
+        <ion-list class="listIos">
+          <ion-item class="ionItem">
+            <ion-label color="#fff">Page Number:</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item class="ionItem">
+            <ion-label color="#fff">Webpage:</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+          <div class="changed">
+              <button ion-button>Change the short link</button>
+          </div>
+    </div>
+    <div class="recalculation change">
+        <h4>Recalculation</h4>
+          <ion-list class="listIos">
+            <ion-item class="ionItem">
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+            <div class="changed">
+                <button ion-button>Recalculate the indicators of new events</button>
+            </div>
+      </div>
+      <div class="verification change">
+          <h4>Verification</h4>
+              <div class="changed">
+                  <button (click)="openVerification()" ion-button>Request for verification</button>
+              </div>
+              <ng-template [ngIf]= "forRequest">
+              <div class="view-ferification">
+                <ion-list class="listIos">
+                    <ion-item class="ionItem">
+                      <ion-label color="#fff">Skype:</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item class="ionItem">
+                      <ion-label color="#fff">Confirmation Document #1:</ion-label>
+                    </ion-item>
+                  </ion-list>
+                  <div class="select-file">
+                    <button ion-button>Select the document</button>
+                  </div>
+                  <div class="upload-img">
+                    <img src="assets/imgs/document1.jpg">
+                    <p>Document to choose from: student ID, drivers license.</p>
+                  </div>
+                  <ion-list class="listIos">
+                    <ion-item class="ionItem">
+                      <ion-label color="#fff">Confirmation Document #2:</ion-label>
+                    </ion-item>
+                  </ion-list>
+                    <div class="select-file">
+                      <button ion-button>Select the document</button>
+                    </div>
+                    <div class="upload-img">
+                      <img src="assets/imgs/document2.jpg">
+                      <p>Scan passport.</p>
+                      <ion-item class="ionCheckbox">
+                        <ion-label>I agree to the processing and storage of<br> my personal data</ion-label>
+                        <ion-checkbox></ion-checkbox>
+                      </ion-item>
+                    </div>
+                    <div class="changed">
+                        <button ion-button>Send</button>
+                    </div>
+              </div>
+            </ng-template>
+        </div>
+        <div class="recalculation change">
+            <h4>Your email address</h4>
+            <ion-list class="listIos">
+            <ion-item class="ionItem">
+                <ion-label color="#fff">Current address:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              <ion-item class="ionItem">
+                <ion-label color="#fff">New address:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-list>
+              <div class="changed padding-bottom">
+                  <button ion-button>Save address</button>
+              </div>
+          </div>
+          <ion-footer class="fixed">
+              <ion-toolbar>
+                <ion-buttons>
+                   <button ion-button icon-only>
+                       <ion-icon name="md-mail"></ion-icon>
+                   </button>
+                   <button ion-button icon-only>
+                       <ion-icon name="md-person-add"></ion-icon>
+                   </button>
+                   <button ion-button icon-only>
+                       <ion-icon name="ios-search"></ion-icon>
+                   </button>
+                   <button ion-button icon-only>
+                       <ion-icon name="ios-paper"></ion-icon>
+                   </button>
+                   <button ion-button icon-only>
+                       <ion-icon name="ios-add-circle"></ion-icon>
+                   </button>
+                   <button ion-button icon-only>
+                       <ion-icon name="md-flag"></ion-icon>
+                   </button>
+               </ion-buttons>
+              </ion-toolbar>
+            </ion-footer>
+</ion-content>
